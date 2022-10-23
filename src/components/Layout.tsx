@@ -1,6 +1,5 @@
-import { Box, Button, Center, Heading } from "@chakra-ui/react";
+import { Box, Button, Center, Heading, Input } from "@chakra-ui/react";
 import { Footer } from "./Footer";
-import { Input } from "./Input";
 import { login } from "../services/login";
 
 export const Layout = (props: any) => {
@@ -15,14 +14,14 @@ export const Layout = (props: any) => {
         </Center>
         <Center>
           <Box
-            backgroundColor="#fff"
+            backgroundColor="whiteAlpha.800"
             width="20%"
             textAlign="center"
             m="12rem"
             p="2rem"
             borderRadius="40px">
-            <Input id="email" />
-            <Input id="password" />
+            <Input placeholder="email" type="email" my='0.5rem' />
+            <Input placeholder="password" type="password" my='0.5rem' />
             <Button
               onClick={login}
               colorScheme="pink"
